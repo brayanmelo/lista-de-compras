@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+:root {
+    --bg-color: #0f2238;
+    --font-color: rgb(245, 245, 245);
+    --green-color: #5ec719;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    max-height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    text-align: center;
+}
+.container h1 {
+    font-size: 2.0rem;
+    letter-spacing: 3px;
+    color: var(--font-color);
+    margin-bottom: 30px;
+}
+.container h1 span {
+    font-size: 3.8rem;
+    color: var(--green-color);
+}
+.mensagem-error {
+    visibility: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.mensagem-error.active{
+    visibility: visible;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.pError {
+    color: rgba(231, 17, 46, 0.918);
+    font-weight: 600;
+    font-size: 0.8rem;
+    width: 130px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.container .input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+.container .input input {
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    outline: none;
+}
+.container .input button {
+    margin: 6% auto;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: var(--green-color);
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.493);
+}
+.container .input button:hover {
+    background-color: #63da14;
+    transition: 0.2s;
+}
+.img {
+    height: 16px;
+    margin-right: 8px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.493));
+}
+.itens-adicionados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--font-color);
+    margin-top: 18px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+.itens-adicionados img {
+    height: 16px;
+    margin-right: 8px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.493));
+}
+.line {
+    width: 100%;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.13);
+}
+
+/*---------------------- TAREFAS -------------------------*/
+
+.tarefas {
+    margin-top: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tarefas p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    background-color: rgba(85, 85, 85, 0.151);
+    color: var(--font-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+.tarefas p:hover {
+    background-color: rgba(85, 85, 85, 0.384);
+    transition: 0.3s;
+}
+.botao-delete {
+    background-color: rgba(231, 17, 46, 0.671);
+    color: aliceblue;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;   
+}
+.botao-delete:hover {
+    background-color: rgba(231, 17, 46, 0.712);
+    transition: 0.2s;
+}
+
+/*---------------------- RESPONSIVE -------------------------*/
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 40%;
+    }
+    .container h1 {
+        font-size: 3rem;
+    }
+    .container .input button {
+        margin: 2% auto;
+    }
+    .itens-adicionados {
+        font-size: 1rem;
+    }
+    .itens-adicionados img {
+        height: 18px;
+    }
+}
