@@ -68,6 +68,7 @@ body {
     margin-top: 2%;
 }
 .container .input input {
+    font-size: 1.1rem;
     padding: 13px;
     border: none;
     border-radius: 8px;
